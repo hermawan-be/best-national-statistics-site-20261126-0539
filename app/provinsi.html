@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Provinsi — Statistik Indonesia</title>
+<meta name="description" content="Tabel 38 provinsi Indonesia: jumlah penduduk, luas wilayah, kepadatan, dan IPM 2024. Klik kepala kolom untuk mengurutkan.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="provinsi">
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name"><span class="brand-mark"></span>Statistik Indonesia</span>
+      <p class="brand-tag">Angka-angka resmi Indonesia, dirangkum rapi</p>
+    </a>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="penduduk.html">Penduduk</a>
+      <a href="ekonomi.html">Ekonomi</a>
+      <a href="provinsi.html">Provinsi</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>38 Provinsi Indonesia</h1>
+    <p>Jumlah penduduk, luas wilayah, kepadatan, dan Indeks Pembangunan Manusia (IPM) tiap provinsi. <strong>Klik kepala kolom untuk mengurutkan</strong> — misalnya urutkan menurut penduduk terbanyak, wilayah terluas, atau IPM tertinggi. Ketik di kotak pencarian untuk menyaring provinsi.</p>
+  </section>
+
+  <div class="table-tools">
+    <input type="search" id="province-filter" placeholder="Cari provinsi, misalnya: Jawa, Papua, Bali…" aria-label="Cari provinsi">
+    <span id="province-count">38 dari 38 provinsi ditampilkan.</span>
+  </div>
+
+  <div class="table-scroll">
+    <table id="province-table">
+      <thead>
+        <tr>
+          <th data-key="name" aria-sort="none">Provinsi</th>
+          <th data-key="population" class="num" aria-sort="descending">Penduduk (jiwa)</th>
+          <th data-key="area" class="num" aria-sort="none">Luas (km²)</th>
+          <th data-key="density" class="num" aria-sort="none">Kepadatan (jiwa/km²)</th>
+          <th data-key="ipm" class="num" aria-sort="none">IPM</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <section class="sources">
+    <h2>Catatan dan sumber data</h2>
+    <ul>
+      <li>Jumlah penduduk: BPS, Proyeksi Penduduk Interim 2020–2023, pertengahan tahun 2024. Angka tiap provinsi dibulatkan ke 100 jiwa, sehingga jumlah ke-38 provinsi (281.603.900 jiwa) berselisih 100 jiwa dari total nasional 281.603.800 jiwa.</li>
+      <li>Luas wilayah: BPS, Statistik Indonesia 2026 (data Badan Informasi Geospasial, Desember 2024). Total luas Indonesia 1.890.179,78 km². Provinsi terluas adalah Kalimantan Tengah (153.430,36 km²); terkecil DKI Jakarta (661,53 km²).</li>
+      <li>Kepadatan dihitung dari kolom penduduk dibagi kolom luas pada tabel ini.</li>
+      <li>IPM: BPS, Indeks Pembangunan Manusia 2024. Tertinggi DKI Jakarta (83,08), terendah Papua Pegunungan (53,42); IPM nasional 74,20.</li>
+    </ul>
+  </section>
+
+  <div class="page-links">
+    <a href="penduduk.html">Kembali ke Penduduk →</a>
+    <a class="ghost" href="index.html">Beranda →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Statistik Indonesia</strong> — kompilasi mandiri dari rilis resmi pemerintah. Bukan situs resmi Badan Pusat Statistik (BPS).</p>
+    <p>Data terakhir diperbarui mengikuti rilis BPS tahun 2024 dan SUPAS 2025.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

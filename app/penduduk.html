@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penduduk — Statistik Indonesia</title>
+<meta name="description" content="Jumlah penduduk Indonesia 281,6 juta jiwa, laju pertumbuhan, struktur umur, generasi, dan provinsi berpenduduk terbesar.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="penduduk">
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name"><span class="brand-mark"></span>Statistik Indonesia</span>
+      <p class="brand-tag">Angka-angka resmi Indonesia, dirangkum rapi</p>
+    </a>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="penduduk.html">Penduduk</a>
+      <a href="ekonomi.html">Ekonomi</a>
+      <a href="provinsi.html">Provinsi</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Penduduk Indonesia</h1>
+    <p>Indonesia adalah negara berpenduduk terbesar keempat di dunia. Pada pertengahan 2024 jumlah penduduk mencapai <strong>281,6 juta jiwa</strong> dan terus tumbuh sekitar 1% per tahun, dengan hampir 69% penduduk berada pada usia produktif.</p>
+  </section>
+
+  <ul class="fact-list">
+    <li><strong>281,6 juta jiwa</strong>Jumlah penduduk, pertengahan 2024 — BPS, Proyeksi Penduduk Interim</li>
+    <li><strong>1,04% per tahun</strong>Laju pertumbuhan penduduk 2024 — BPS</li>
+    <li><strong>45,05</strong>Rasio ketergantungan 2025: tiap 100 penduduk produktif menanggung 45 penduduk nonproduktif — BPS, SUPAS 2025</li>
+    <li><strong>2,13</strong>Angka kelahiran total (TFR) 2025 — BPS, SUPAS 2025</li>
+    <li><strong>102</strong>Rasio jenis kelamin 2025: 102 laki-laki per 100 perempuan — BPS, SUPAS 2025</li>
+    <li><strong>284,67 juta jiwa</strong>Jumlah penduduk hasil SUPAS 2025 — BPS, 5 Mei 2025</li>
+  </ul>
+
+  <h2>Pertumbuhan penduduk, 2019–2024</h2>
+  <p class="section-note">Jumlah penduduk pertengahan tahun (juta jiwa). Laju pertumbuhan melambat perlahan, dari 1,25% per tahun pada 2010–2020 menjadi sekitar 1% per tahun saat ini.</p>
+  <section class="panel">
+    <h3>Jumlah penduduk (juta jiwa)</h3>
+    <p class="panel-note">Sumber: BPS, Sensus Penduduk 2020 dan Proyeksi Penduduk Interim</p>
+    <div id="chart-population"></div>
+  </section>
+
+  <h2>Struktur umur</h2>
+  <p class="section-note">Indonesia masih menikmati bonus demografi: penduduk usia produktif (15–64 tahun) mencapai 68,94%. Namun proporsi lansia naik — dari 5,04% pada 2010 menjadi 7,62% pada 2025 — sehingga Indonesia mulai memasuki fase penuaan penduduk.</p>
+  <section class="panel">
+    <h3>Kelompok umur, 2025 (%)</h3>
+    <p class="panel-note">Sumber: BPS, Survei Penduduk Antar Sensus (SUPAS) 2025</p>
+    <div id="chart-age"></div>
+  </section>
+
+  <h2>Generasi penduduk</h2>
+  <p class="section-note">Gen Z adalah kelompok terbesar, diikuti Milenial. Milenial, Gen Z, dan Post Gen Z bersama-sama mencakup 68,92% penduduk Indonesia.</p>
+  <section class="panel">
+    <h3>Penduduk menurut generasi, 2025 (%)</h3>
+    <p class="panel-note">Sumber: BPS, SUPAS 2025</p>
+    <div id="chart-generations"></div>
+  </section>
+
+  <h2>Provinsi berpenduduk terbesar</h2>
+  <p class="section-note">Lebih dari separuh penduduk Indonesia tinggal di Pulau Jawa. Jawa Barat sendiri dihuni 50,35 juta jiwa — 17,88% dari seluruh penduduk Indonesia.</p>
+  <section class="panel">
+    <h3>Sepuluh provinsi berpenduduk terbesar, 2024 (juta jiwa)</h3>
+    <p class="panel-note">Sumber: BPS, Proyeksi Penduduk Interim 2020–2023 (pertengahan tahun 2024)</p>
+    <div id="chart-top-provinces"></div>
+  </section>
+
+  <div class="page-links">
+    <a href="provinsi.html">Lihat tabel 38 provinsi →</a>
+    <a class="ghost" href="ekonomi.html">Lanjut ke Ekonomi →</a>
+  </div>
+
+  <section class="sources">
+    <h2>Sumber data halaman ini</h2>
+    <ul>
+      <li>Jumlah penduduk dan laju pertumbuhan: BPS, Proyeksi Penduduk Interim 2020–2023 dan Sensus Penduduk 2020.</li>
+      <li>Struktur umur, rasio ketergantungan, TFR, rasio jenis kelamin, dan generasi: BPS, Survei Penduduk Antar Sensus (SUPAS) 2025, dirilis 5 Mei 2025.</li>
+      <li>Penduduk per provinsi: BPS, publikasi Indikator Strategis Provinsi Jawa Barat di Peringkat Nasional 2024 (Tabel 2).</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Statistik Indonesia</strong> — kompilasi mandiri dari rilis resmi pemerintah. Bukan situs resmi Badan Pusat Statistik (BPS).</p>
+    <p>Data terakhir diperbarui mengikuti rilis BPS tahun 2024 dan SUPAS 2025.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

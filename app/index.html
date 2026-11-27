@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statistik Indonesia — Beranda</title>
+<meta name="description" content="Dasbor indikator kunci Indonesia: penduduk, PDB, inflasi, pengangguran, dan kemiskinan, dari data resmi BPS.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name"><span class="brand-mark"></span>Statistik Indonesia</span>
+      <p class="brand-tag">Angka-angka resmi Indonesia, dirangkum rapi</p>
+    </a>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="penduduk.html">Penduduk</a>
+      <a href="ekonomi.html">Ekonomi</a>
+      <a href="provinsi.html">Provinsi</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Indonesia dalam angka</h1>
+    <p>Enam indikator kunci terbaru — <strong>jumlah penduduk 281,6 juta jiwa</strong>, ekonomi tumbuh <strong>5,03%</strong> pada 2024, dan tingkat kemiskinan terendah sepanjang sejarah pencatatan BPS. Semua angka di situs ini berasal dari rilis resmi dan dicantumkan sumbernya.</p>
+  </section>
+
+  <div class="kpi-grid" id="kpi-grid"></div>
+
+  <h2>Tren utama</h2>
+  <p class="section-note">Perkembangan penduduk dan pertumbuhan ekonomi Indonesia, 2019–2024.</p>
+  <div class="chart-grid">
+    <section class="panel">
+      <h3>Jumlah penduduk (juta jiwa)</h3>
+      <p class="panel-note">Pertengahan tahun — BPS, Sensus Penduduk 2020 dan Proyeksi Penduduk Interim</p>
+      <div id="chart-population"></div>
+    </section>
+    <section class="panel">
+      <h3>Pertumbuhan ekonomi (% per tahun)</h3>
+      <p class="panel-note">BPS, Berita Resmi Statistik PDB Triwulan IV-2024</p>
+      <div id="chart-growth"></div>
+    </section>
+  </div>
+
+  <h2>Jelajahi datanya</h2>
+  <div class="page-links">
+    <a href="penduduk.html">Penduduk →</a>
+    <a href="ekonomi.html">Ekonomi →</a>
+    <a href="provinsi.html">Provinsi →</a>
+  </div>
+
+  <section class="sources">
+    <h2>Sumber data halaman ini</h2>
+    <ul>
+      <li>Jumlah penduduk: BPS, Proyeksi Penduduk Interim 2020–2023 (pertengahan tahun 2024).</li>
+      <li>PDB dan PDB per kapita: BPS, Berita Resmi Statistik No. 17/02/Th. XXVIII, 5 Februari 2025.</li>
+      <li>Inflasi: BPS, Berita Resmi Statistik inflasi Desember 2024.</li>
+      <li>Pengangguran: BPS, Booklet Sakernas Agustus 2024.</li>
+      <li>Kemiskinan: BPS, Berita Resmi Statistik kemiskinan September 2024.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Statistik Indonesia</strong> — kompilasi mandiri dari rilis resmi pemerintah. Bukan situs resmi Badan Pusat Statistik (BPS).</p>
+    <p>Data terakhir diperbarui mengikuti rilis BPS tahun 2024 dan SUPAS 2025.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="main.js"></script>
+<script>
+(function () {
+  var D = window.STATS_DATA;
+  var host = document.getElementById("kpi-grid");
+  if (!D || !host) return;
+  var styles = ["", "red", "gold", "", "red", "gold"];
+  host.innerHTML = D.INDICATORS.map(function (k, i) {
+    return '<article class="kpi ' + styles[i % styles.length] + '">' +
+      '<div class="kpi-label">' + k.label + '</div>' +
+      '<div class="kpi-value">' + k.value + '</div>' +
+      '<p class="kpi-detail">' + k.detail + '</p>' +
+      '<p class="kpi-source">Sumber: ' + k.source + '</p>' +
+      '</article>';
+  }).join("");
+})();
+</script>
+</body>
+</html>
